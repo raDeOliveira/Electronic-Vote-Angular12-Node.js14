@@ -7,3 +7,8 @@ Inclues:
 * Sends email confirmation with vote;
 * Voter profile able to update as password;
 * etc
+
+
+![Screenshot](evote1.png)
+
+![Screenshot](evote2.png)
