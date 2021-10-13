@@ -9,7 +9,7 @@ Inclues:
 * etc
 
 
-![Screenshot](evote1.png)
+![Screenshot](Electronic-Vote-Angular12-Node.js14/evote1.png)
 
 ![Screenshot](evote2.png)
 
