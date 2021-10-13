@@ -1,0 +1,44 @@
+
+
+
+<div *ngIf="voteRegistered; else elseBlock">
+  <br><br><br><br><br>
+  <h5 id="message" class="text-align-center alert alert-warning">{{message}}</h5>
+</div>
+
+<ng-template #elseBlock>
+  <br><br><br><br><br>
+  <h2 class="text-align-center">{{nameEvent}}</h2>
+  <br>
+  <form id="form-login" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+  <table class="text-align-center table table-hover">
+    <thead id="custom-color-table">
+    <tr>
+      <th scope="col">Candidate</th>
+      <th scope="col">Vote</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let item of candidate.data">
+      <th scope="row">{{ item.name_candidate }}</th>
+      <th>
+        <label for="idCandidate"></label>
+        <input value="{{item.id_candidate}}" id="idCandidate" type="radio" name="idCandidate" [(ngModel)]="form.idCandidate" #idCandidate="ngModel"
+               required autofocus/>
+      </th>
+    </tr>
+    </tbody>
+  </table>
+    <div *ngIf="f.submitted && !idCandidate">
+      <div class="alert alert-warning" role="alert"><strong>Please choose a candidate</strong></div>
+    </div>
+    <br>
+
+    <button type="submit" id="button1" style="width: auto" class="btn btn-sm btn-success btn-block" *ngIf="!voteRegistered">Vote</button>
+  </form>
+</ng-template>
+
+<div class="buttons">
+  <button id="button2" style="width: auto" class="btn btn-sm btn-info btn-block" (click)="goBack()">Back</button>
+</div>

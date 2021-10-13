@@ -1,0 +1,23 @@
+#custom-color-table {
+  background-color: #508ca4;
+}
+
+.buttons {
+  width: 200px;
+  margin: 0 auto;
+  display: inline;
+}
+
+#button1, #button2 {
+  width: 200px;
+  margin: 5px;
+  display: inline;
+}
+
+#button2 {
+  background-color: #508ca4;
+}
+
+.text-align-center {
+  text-align: center;
+}

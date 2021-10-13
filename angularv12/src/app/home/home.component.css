@@ -1,0 +1,23 @@
+#vote-button {
+  background-color: #508ca4;
+}
+
+#results-button {
+  background-color: #508ca4;
+}
+
+#custom-color-table {
+  background-color: #508ca4;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+/* logo Evote */
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}

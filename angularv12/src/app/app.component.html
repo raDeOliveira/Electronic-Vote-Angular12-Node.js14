@@ -1,0 +1,25 @@
+<nav id="custom-color-navbar" class="navbar navbar-expand-lg navbar-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class=" navbar-nav mr-auto nav navbar-nav" routerLinkActive="active">
+      <li class="nav-item"><a class="nav-link" routerLink="home">Home</a></li>
+      <li *ngIf="authority === 'user'" class="nav-item">
+        <a class="nav-link" routerLink="user">Profile</a>
+      </li>
+      <li *ngIf="!authority" class="nav-item">
+        <a class="nav-link" routerLink="auth/login">Login</a>
+      </li>
+      <li *ngIf="authority" class="nav-item">
+        <a class="nav-link" role="button" (click)="logout()">Logout</a>
+      </li>
+    </ul>
+  </div>
+
+</nav>
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>

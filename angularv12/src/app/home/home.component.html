@@ -1,0 +1,40 @@
+<div *ngIf="event; else loggedOut">
+  <br><br>
+  <h5>Welcome<strong> {{userInfo.name}}</strong></h5>
+  <br><br>
+
+  <h2 class="text-align-center">Choose an event to vote</h2>
+  <br>
+<div class="form-group">
+  <input type="text" class="form-control" placeholder="Search..." [(ngModel)]="filterTerm">
+</div>
+<!-- table of events -->
+<table id="myTable" class="text-align-center table table-hover">
+  <thead id="custom-color-table">
+  <tr>
+    <th scope="col">Event name</th>
+    <th scope="col">Description</th>
+    <th scope="col">Results</th>
+    <th scope="col">Vote</th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <!-- live search events on table -->
+  <tr *ngFor="let item of event.data | filter:filterTerm">
+    <th scope="row">{{ item.event_name }}</th>
+    <th scope="row">{{ item.event_description }}</th>
+    <!--    router to pass object parameters-->
+    <th><a id="results-button" [routerLink]="['/results', item.id_event, item.event_name]" class="btn btn-sm btn-success btn-block">Results</a></th>
+    <th><a [routerLink]="['/event/', item.id_event, item.event_name]" class="btn btn-sm btn-success btn-block">Vote</a></th>
+  </tr>
+  </tbody>
+</table>
+
+</div>
+<br>
+
+<ng-template #loggedOut>
+  <br><br><br><br><br><br>
+  <img id="logo-img" class="center img-fluid" src="../../assets/images/evote-logo.png" alt="">
+</ng-template>

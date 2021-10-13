@@ -1,0 +1,87 @@
+<div *ngIf="isSignedUp; else signupForm">
+  Your profile was updated!
+</div>
+
+<!-- user profile edit -->
+<ng-template #signupForm>
+    <div id='my-tab-content' class='tab-content'>
+      <div class='tab-pane active' id='edit-user'>
+        <br><br>
+        <h2 class="text-align-center">Update profile</h2>
+        <br><br>
+        <form id="update-form" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate>
+          <div class="form-group row">
+            <label for="name" class="col-sm-2 col-form-label col-form-label-sm">
+              <h5><strong>Name:</strong></h5>
+            </label>
+            <div class="col-sm-10">
+              <input id="name" type="text" class="form-control" name="name" placeholder="Name" [(ngModel)]="form.name"
+                     #name="ngModel"/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label">
+              <h5><strong>Email:</strong></h5>
+            </label>
+            <div class="col-sm-10">
+              <input id="email" type="text" class="form-control" name="email" placeholder="Email" [(ngModel)]="form.email"
+                     #email="ngModel"/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="nidentificacao" class="col-sm-2">
+              <h5><strong>Identification number:</strong></h5>
+            </label>
+            <div class="col-sm-10">
+              <input id="nidentificacao" type="text" class="form-control" name="nidentificacao"
+                     placeholder="Identification number" [(ngModel)]="form.nidentificacao" #nidentificacao="ngModel"/>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label for="type_document" class="col-sm-2">
+              <h5><strong>Type of document:</strong></h5></label>
+            <div class="col-sm-10">
+              <input id="type_document" type="text" class="form-control" name="type_document"
+                     placeholder="Type of document" [(ngModel)]="form.type_document" #type_document="ngModel"/>
+            </div>
+          </div>
+        </form>
+
+        <div class="form-group">
+          <br>
+          <hr id="break-line2">
+          <!-- update password form -->
+          <form id="update-password">
+              <button class="btn btn-sm btn-danger btn-block" (click)="showEditPassword()" id="change-password">Change password</button>
+            <br>
+            <div class="form-group row">
+              <label for="new-password" class="col-sm-2 col-form-label">
+                <h5><strong>New password:</strong></h5>
+              </label>
+              <div class="col-sm-10">
+                <input id="new-password" type="password"
+                       class="form-control" name="new-password" [(ngModel)]="form.password" #password="ngModel"
+                       [disabled]="disablePassword" />
+              </div>
+            </div>
+          </form>
+          <hr id="break-line3">
+          <br><br>
+
+          <!-- div buttons-->
+          <div class="row">
+            <div class="col">
+              <button id="back-button" class="btn btn-lg btn-success btn-block" (click)="goBack()">Back</button>
+            </div>
+            <div class="col">
+              <button id="save-button" form="update-form" class="btn btn-lg btn-success btn-block">Update</button>
+            </div>
+          </div>
+        </div>
+      </div>
+  </div>
+</ng-template>
+

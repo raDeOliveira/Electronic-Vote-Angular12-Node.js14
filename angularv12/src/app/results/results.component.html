@@ -1,0 +1,28 @@
+
+<div *ngIf="dateVerified; else elseBlock">
+  <br><br><br><br><br>
+  <h5 id="message" class="text-align-center alert alert-warning">{{message}}</h5>
+</div>
+
+<ng-template #elseBlock>
+
+  <br><br><br><br><br>
+  <h2 class="text-align-center">{{nameEvent}} results</h2>
+  <br>
+  <table class="text-align-center table table-hover">
+    <thead id="custom-color-table">
+    <tr>
+      <th scope="col">Candidate</th>
+      <th scope="col">Votes</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr *ngFor="let item of vote.data">
+      <th scope="row">{{ item.name_candidate }}</th>
+      <th scope="row">{{ item.total }}</th>
+    </tr>
+    </tbody>
+  </table>
+</ng-template>
+<button id="back-button" style="width: auto" class="btn btn-sm btn-info btn-block" (click)="goBack()">Back</button>
