@@ -12,3 +12,6 @@ Inclues:
 ![Screenshot](evote1.png)
 
 ![Screenshot](evote2.png)
+
+<img src="/docs/logo.png" alt="My cool logo"/>
+# My cool project and above is the logo of it
