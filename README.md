@@ -9,9 +9,5 @@ Inclues:
 * etc
 
 
-![Screenshot](Electronic-Vote-Angular12-Node.js14/evote1.png)
-
-![Screenshot](evote2.png)
-
-<img src="../evote2.png" alt="My cool logo"/>
+<img src="evote2.png" alt="My cool logo"/>
 # My cool project and above is the logo of it
