@@ -13,7 +13,7 @@ Inclues:
 <img src="https://github.com/raOliveiraGitHub/Electronic-Vote-Angular12-Node.js14/blob/main/evote2.PNG" alt=""/>
 
 # Need Node.js v14 and Angular v12 to run the app
-https://nodejs.org/en/
+https://nodejs.org/en/<br>
 https://angular.io/
 
 # How to run Backend
