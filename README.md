@@ -18,14 +18,14 @@ Inclues:
 https://nodejs.org/en/<br>
 https://angular.io/
 
-# How to run Backend
+# How to run backend
 Inside ./node14/server
 
 $npm install
 
 $node server.js
 
-# Running Frontend
+# Running frontend
 Inside ./angular
 
 $npm install
