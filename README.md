@@ -21,7 +21,14 @@ Inside ./node14/server
 
 $npm install
 
+$node server.js
+
 # Running Frontend
 Inside ./angular
 
-$cd
+$npm install
+
+$ npm start
+
+# URI to launch
+http://localhost:4200/ 
